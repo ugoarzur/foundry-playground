@@ -3,12 +3,14 @@ pragma solidity ^0.8.21;
 
 contract Wallet {
     address payable public owner;
-
-    constructor() {
+    event Deposit(address account, uint256 amount);
+    constructor() payable {
         owner = payable(msg.sender);
     }
 
-    receive() external payable {}
+    receive() external payable {
+        emit Deposit(msg.sender, msg.value);
+    }
 
     function withdraw(uint _amount) external {
         require(msg.sender == owner, "caller is not owner");
