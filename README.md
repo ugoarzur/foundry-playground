@@ -15,46 +15,20 @@ https://book.getfoundry.sh/
 
 ## Usage
 
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
+| command                                             | description                                                 |
+| --------------------------------------------------- | ----------------------------------------------------------- |
+| `$ forge build`                                     | Build the smart contracts                                   |
+| `$ forge test`                                      | Testing the smart contracts                                 |
+| `$ forge test --match-path test/Wallet.t.sol -vvvv` | Testing a specific file in verbose mode                     |
+| `$ forge fmt`                                       | Formatting smart contracts and tests                        |
+| `$ forge snapshot`                                  | Take a snapshot of the gas costs for all the functions      |
+| `$ anvil`                                           | Launch a local Ethereum Node                                |
+| `$ cast <subcommand>`                               | Use it to interact onchain with deployed EVM smart contract |
 
 ### Deploy
 
 ```shell
 $ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
 ```
 
 ### Help
