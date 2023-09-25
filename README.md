@@ -31,6 +31,28 @@ https://book.getfoundry.sh/
 $ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
 ```
 
+# Tests
+
+- [x] Installing Foundry
+- [x] Write basic tests
+- [x] Set Solidity compiler version (toml)
+- [x] Remapping dependencies & libs
+- [x] formats code & console.log
+- [x] Authentication
+- [x] Error handling
+- [x] Event handling
+- [x] Time handling (`block.timestamp` in seconds, even in days)
+- [x] Sending ETH
+- [x] Transaction Signature
+- [x] Gas-less token Transfer (with ERC20Permit.sol)
+- [ ] Forking networks
+- [ ] Minting a Million DAI ERC20 on Mainnet Fork
+- [ ] Invariant testings
+- [ ] FFI
+- [ ] Differential test
+- [ ] Vyper Smart Contract?
+- [ ] Deploy with Foundry script
+
 ### Help
 
 ```shell
@@ -38,3 +60,7 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+
+### Resources
+
+- [Foundry Playlist](https://youtu.be/YJN7MMllK8M?feature=shared)
