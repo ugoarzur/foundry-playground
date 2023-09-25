@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.21;
 
 import "forge-std/Test.sol";
@@ -21,5 +22,10 @@ contract SignatureTest is Test {
         // recovering the signer with proofs signature parts and hashed message
         address signer = ecrecover(messageHash, v, r, s);
         assertEq(signer, publickey);
+
+        // trying to retrieve signer with wrong signature
+        bytes32 invalidMessageHash = keccak256("Invalid message");
+        signer = ecrecover(invalidMessageHash, v, r, s);
+        assertTrue(signer != publickey);
     }
 }
